@@ -18,10 +18,20 @@ pipeline {
         sh 'ls'
     }
 } 
-          post {
+          stage('Build') 
+         {
+             steps 
+             {
+                  post {
         always {
             archiveArtifacts artifacts: 'output.txt', onlyIfSuccessful: true
         }
     }
+                 sh 'echo "Hello World"'
+                 sh 'python --version'
+             }
+         }
+          
+          
      }
 }
