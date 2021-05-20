@@ -18,5 +18,11 @@ pipeline {
         sh 'ls'
     }
 }
+          
+          post {
+        always {
+            archiveArtifacts artifacts: 'output.txt', onlyIfSuccessful: true
+        }
+    }
      }
 }
