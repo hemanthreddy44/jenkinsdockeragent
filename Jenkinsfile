@@ -18,7 +18,7 @@ pipeline {
         sh 'ls'
     }
 } 
-          stage('Build') 
+          stage('postBuild') 
          {
              steps 
              {
