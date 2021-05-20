@@ -14,6 +14,7 @@ pipeline {
         sh 'python hello.py'  
         sh 'python hello.py > output.txt'
         sh 'cat output.txt'
+        sh 'pwd'
     }
 }
      }
