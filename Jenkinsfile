@@ -17,8 +17,7 @@ pipeline {
         sh 'pwd'
         sh 'ls'
     }
-}
-          
+} 
           post {
         always {
             archiveArtifacts artifacts: 'output.txt', onlyIfSuccessful: true
