@@ -22,7 +22,7 @@ pipeline {
       steps {
         sh 'echo "Hello World"'
         sh 'python --version'
-        archiveArtifacts(allowEmptyArchive: true, artifacts: '\'jenkinsdockeragent_main/*.*\'')
+        archiveArtifacts(allowEmptyArchive: true, artifacts: '\'/bitnami/jenkins/jenkins_home/workspace/jenkinsdockeragent_main/*.*\'')
       }
     }
 
