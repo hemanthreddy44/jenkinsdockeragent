@@ -29,7 +29,7 @@ pipeline {
 
         sh 'echo "Hello World"'
         sh 'python --version'
-        archiveArtifacts(allowEmptyArchive: true, artifacts: 'output.txt')
+        archiveArtifacts(allowEmptyArchive: true, artifacts: '\'jenkinsdockeragent_main/*.*\'')
       }
     }
 
