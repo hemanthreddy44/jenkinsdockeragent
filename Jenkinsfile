@@ -12,6 +12,7 @@ pipeline {
          stage('build_python') {
     steps {
         sh 'python hello.py'  
+        sh 'python ./myscript.py > output.txt'
     }
 }
      }
