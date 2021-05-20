@@ -20,13 +20,6 @@ pipeline {
 
     stage('postBuild') {
       steps {
-        post() {
-          always() {
-            archiveArtifacts(artifacts: 'output.txt', onlyIfSuccessful: true)
-          }
-
-        }
-
         sh 'echo "Hello World"'
         sh 'python --version'
         archiveArtifacts(allowEmptyArchive: true, artifacts: '\'jenkinsdockeragent_main/*.*\'')
